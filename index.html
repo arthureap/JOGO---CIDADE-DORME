@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#100b1c">
+  <meta name="description" content="Cidade Dorme — um jogo de mistério, estratégia e dedução.">
+  <title>Cidade Dorme</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+
+  <main class="app">
+    <header class="brand">
+      <div class="moon" aria-hidden="true">☾</div>
+      <p class="eyebrow">UMA CIDADE. MUITOS SEGREDOS.</p>
+      <h1>Cidade <span>Dorme</span></h1>
+      <p class="tagline">
+        Quando a noite cai, ninguém é quem parece ser.
+      </p>
+    </header>
+
+    <section id="setup" class="panel">
+      <div class="section-heading">
+        <span class="step">01</span>
+        <div>
+          <h2>Reúna a cidade</h2>
+          <p>Digite um nome por linha para preparar a partida.</p>
+        </div>
+      </div>
+
+      <label for="playerNames">Nomes dos jogadores</label>
+      <textarea
+        id="playerNames"
+        rows="7"
+        placeholder="Ana&#10;Pedro&#10;Lucas&#10;Mariana"
+        autocapitalize="words"
+        autocomplete="off"
+      ></textarea>
+
+      <div class="between">
+        <span id="playerCount" class="muted">0 jogadores</span>
+        <span class="muted">Mínimo: 4 · Máximo: 40</span>
+      </div>
+
+      <div class="rules">
+        <div>
+          <strong>4–10 jogadores</strong>
+          <span>1 assassino · 1 médico · 1 detetive</span>
+        </div>
+        <div>
+          <strong>11–40 jogadores</strong>
+          <span>2 assassinos · 2 médicos · 2 detetives</span>
+        </div>
+      </div>
+
+      <button id="startBtn" class="primary" type="button">
+        Preparar partida <span aria-hidden="true">→</span>
+      </button>
+
+      <p id="setupMessage" class="message" role="status"></p>
+    </section>
+
+    <section id="game" class="panel hidden" aria-live="polite">
+      <div class="game-top">
+        <span id="phaseBadge" class="badge">PREPARAÇÃO</span>
+        <span id="roundLabel" class="muted">Rodada 0</span>
+      </div>
+
+      <div id="gameContent"></div>
+      <div id="gameActions" class="actions"></div>
+    </section>
+
+    <footer class="footer">
+      Joguem juntos. Desconfiem de todos.
+    </footer>
+  </main>
+
+  <noscript>
+    Este jogo precisa de JavaScript ativado para funcionar.
+  </noscript>
+</body>
+</html>
