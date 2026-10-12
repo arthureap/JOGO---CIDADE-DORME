@@ -504,3 +504,21 @@ button:active {
     transition: none !important;
   }
 }
+
+
+.rodape {
+  text-align: center;
+  padding: 24px 16px;
+  margin-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  color: #a9a1bd;
+  font-size: 0.85rem;
+}
+
+.rodape p {
+  margin: 6px 0;
+}
+
+.rodape strong {
+  color: #d8c5ff;
+}
